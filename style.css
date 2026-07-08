@@ -177,6 +177,11 @@ footer {
   padding: 40px 24px;
   background: var(--bg-alt);
   margin-top: 40px;
+  margin-left: 96px;
+}
+
+@media (max-width: 720px) {
+  footer { margin-left: 72px; }
 }
 .footer-links { display: flex; gap: 20px; justify-content: center; margin: 12px 0; }
 .copyright { color: var(--text-muted); font-size: 0.85rem; }
