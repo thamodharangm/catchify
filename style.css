@@ -21,39 +21,88 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  position: sticky;
+.sidebar {
+  position: fixed;
   top: 0;
-  background: rgba(23, 15, 36, 0.9);
-  backdrop-filter: blur(8px);
+  left: 0;
+  bottom: 0;
+  width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  background: var(--bg-alt);
   z-index: 10;
 }
 
-.brand {
+.brand { display: flex; margin-bottom: 32px; }
+.brand img { border-radius: 8px; }
+
+nav { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+nav a {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text);
+  gap: 4px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.72rem;
+  padding: 10px 14px;
+  border-radius: 999px;
 }
-.brand img { border-radius: 6px; }
+nav a:hover { color: var(--accent); text-decoration: none; }
+nav a.active { background: var(--card); color: var(--accent); }
+.nav-icon { font-size: 1.2rem; line-height: 1; }
 
-nav { display: flex; gap: 20px; }
-nav a { color: var(--text-muted); font-weight: 500; }
-nav a:hover { color: var(--accent); }
+main {
+  margin-left: 96px;
+  padding: 0 24px;
+}
+main > section, main > .hero {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-main { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 720px) {
+  .sidebar { width: 72px; }
+  main { margin-left: 72px; }
+}
 
 .hero {
   text-align: center;
   padding: 80px 0 60px;
 }
-.hero-logo { border-radius: 24px; margin-bottom: 24px; }
+.hero-logo-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orb {
+  position: absolute;
+  inset: 0;
+  background: var(--card);
+  clip-path: polygon(50.00% 0.00%, 59.12% 10.03%, 71.69% 4.95%, 75.56% 17.94%, 89.09% 18.83%, 86.94% 32.21%, 98.75% 38.87%, 91.00% 50.00%, 98.75% 61.13%, 86.94% 67.79%, 89.09% 81.17%, 75.56% 82.06%, 71.69% 95.05%, 59.12% 89.97%, 50.00% 100.00%, 40.88% 89.97%, 28.31% 95.05%, 24.44% 82.06%, 10.91% 81.17%, 13.06% 67.79%, 1.25% 61.13%, 9.00% 50.00%, 1.25% 38.87%, 13.06% 32.21%, 10.91% 18.83%, 24.44% 17.94%, 28.31% 4.95%, 40.88% 10.03%);
+  animation: orb-spin 18s linear infinite, orb-pulse 3.2s ease-in-out infinite;
+}
+.hero-logo {
+  position: relative;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+@keyframes orb-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orb-pulse {
+  0%, 100% { box-shadow: 0 0 30px 6px rgba(176, 198, 255, 0.25); }
+  50% { box-shadow: 0 0 46px 14px rgba(176, 198, 255, 0.45); }
+}
 .hero h1 {
   font-size: 3rem;
   margin: 0 0 16px;

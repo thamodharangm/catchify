@@ -8,6 +8,7 @@
 <meta name="keywords" content="Catchify, music streaming app, free music app, offline music player, Android music app, ad-free music, Tamil music app, Hindi music app, no ads music player" />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Thamodharan Ganesan" />
+<meta name="google-site-verification" content="9zC34fSpgyMnwF8GUffEfNrquEFpQy9s4Bbg8fO726U" />
 <link rel="canonical" href="https://thamodharangm.github.io/catchify/" />
 <link rel="icon" type="image/png" href="assets/logo.png" />
 <link rel="stylesheet" href="style.css" />
@@ -107,19 +108,22 @@
 </head>
 <body>
 
-<header class="topbar">
-  <a href="#hero" class="brand"><img src="assets/logo.png" alt="Catchify logo" width="32" height="32" /> Catchify</a>
+<aside class="sidebar">
+  <a href="#hero" class="brand"><img src="assets/logo.png" alt="Catchify logo" width="32" height="32" /></a>
   <nav aria-label="Primary">
-    <a href="#hero">Home</a>
-    <a href="#features">Features</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#faq">F.A.Q</a>
+    <a href="#hero" class="active"><span class="nav-icon" aria-hidden="true">&#8962;</span><span>Home</span></a>
+    <a href="#features"><span class="nav-icon" aria-hidden="true">&#9733;</span><span>Features</span></a>
+    <a href="#gallery"><span class="nav-icon" aria-hidden="true">&#9635;</span><span>Gallery</span></a>
+    <a href="#faq"><span class="nav-icon" aria-hidden="true">?</span><span>F.A.Q</span></a>
   </nav>
-</header>
+</aside>
 
 <main>
   <section id="hero" class="hero">
-    <img src="assets/logo.png" alt="Catchify app logo — a stylized C and music note" width="120" height="120" class="hero-logo" />
+    <div class="hero-logo-wrap">
+      <div class="orb" aria-hidden="true"></div>
+      <img src="assets/logo.png" alt="Catchify app logo — a stylized C and music note" width="120" height="120" class="hero-logo" />
+    </div>
     <h1>Catchify</h1>
     <p class="tagline">Free, ad-free music streaming for Android — with offline listening, custom playlists, and support for 21+ languages.</p>
     <div class="cta-row">
