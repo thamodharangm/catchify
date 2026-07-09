@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>Catchify — Free Music Streaming &amp; Offline Player App</title>
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta
+      name="description"
+      content="Catchify is a free, ad-free music streaming app for Android with offline downloads, custom playlists, a built-in equalizer, lyrics, and support for 21+ languages including Tamil, Hindi, Telugu, and more."
+    />
+    <meta
+      name="keywords"
+      content="Catchify, music streaming app, free music app, offline music player, Android music app, ad-free music, Tamil music app, Hindi music app, no ads music player"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Thamodharan Ganesan" />
+    <meta
+      name="google-site-verification"
+      content="9zC34fSpgyMnwF8GUffEfNrquEFpQy9s4Bbg8fO726U"
+    />
+    <link rel="canonical" href="https://thamodharangm.github.io/catchify/" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Catchify — Free Music Streaming &amp; Offline Player App"
+    />
+    <meta
+      property="og:description"
+      content="Free, ad-free music streaming for Android with offline downloads, custom playlists, equalizer, lyrics, and 21+ language support."
+    />
+    <meta
+      property="og:image"
+      content="https://thamodharangm.github.io/catchify/assets/logo.png"
+    />
+    <meta property="og:url" content="https://thamodharangm.github.io/catchify/" />
+    <meta property="og:site_name" content="Catchify" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Catchify — Free Music Streaming &amp; Offline Player App"
+    />
+    <meta
+      name="twitter:description"
+      content="Free, ad-free music streaming for Android with offline downloads, custom playlists, equalizer, lyrics, and 21+ language support."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thamodharangm.github.io/catchify/assets/logo.png"
+    />
+
+    <!-- Structured data: SoftwareApplication (helps AI/answer engines describe what Catchify is) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Catchify",
+        "operatingSystem": "Android",
+        "applicationCategory": "MusicApplication",
+        "description": "Catchify is a free, ad-free music streaming app for Android with offline downloads, custom playlists, a built-in equalizer, lyrics, and support for 21+ languages.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Thamodharan Ganesan"
+        }
+      }
+    </script>
+
+    <!-- Structured data: FAQPage (helps AEO/GEO — answer engines can extract these Q&As directly) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Catchify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Catchify is a free Android app for streaming and downloading music. It has no ads, no subscriptions, and includes offline playback, custom playlists, an equalizer, lyrics, and support for 21+ languages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Catchify free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Catchify is completely free, with no ads and no subscription plans."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I listen to music offline with Catchify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Catchify lets you download songs and playlists for full offline listening."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What languages does Catchify support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Catchify supports 21+ languages for its interface, and offers curated music suggestions for languages including Tamil, Hindi, Telugu, Marathi, Bengali, Kannada, Punjabi, Malayalam, Gujarati, Urdu, Odia, Assamese, Sanskrit, and Konkani."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install Catchify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Download the latest APK from the Catchify GitHub releases page and install it on your Android device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who made Catchify?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Catchify is developed by Thamodharan Ganesan."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/beercss@4.0.20/dist/cdn/beer.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css?v=20260710b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <nav id="navigation-bar">
+      <header class="catchify-nav-logo">
+        <img class="large catchify-logo" src="assets/logo.png" alt="" />
+        <span class="nav-brand-name">Catchify</span>
+      </header>
+      <a href="#hero" class="active">
+        <i>home</i>
+        <span>Home</span>
+      </a>
+      <a href="#features">
+        <i>auto_awesome</i>
+        <span>Features</span>
+      </a>
+      <a href="#screenshots">
+        <i>photo_library</i>
+        <span>Gallery</span>
+      </a>
+      <a href="#faq">
+        <i>chat_bubble</i>
+        <span>F.A.Q</span>
+      </a>
+    </nav>
+
+    <main class="responsive">
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <div class="hero-logo-blob">
+            <img
+              class="hero-logo"
+              src="assets/logo.png"
+              alt="Catchify app logo — a stylized C and music note"
+            />
+          </div>
+          <h1 class="hero-title">Catchify</h1>
+          <p class="hero-subtitle">
+            Free, ad-free music streaming for Android — with offline
+            listening, custom playlists, and support for 21+ languages.
+          </p>
+          <div class="hero-actions">
+            <a data-download-link href="https://github.com/thamodharangm/catchify/releases">
+              <button class="large round">
+                <i>download</i>
+                <span>Download <span id="download-version"></span></span>
+              </button>
+            </a>
+            <a href="https://github.com/thamodharangm/catchify">
+              <button class="round border">
+                <i>star</i>
+                <span>Star on GitHub</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notice Banner -->
+      <article id="notice" class="notice-banner">
+        <i>info</i>
+        <div>
+          <strong>Official Source Only</strong>
+          <p>
+            Catchify does not have any other official websites. Download only
+            from
+            <a href="https://github.com/thamodharangm/catchify/releases"
+              >GitHub Releases</a
+            >.
+          </p>
+        </div>
+      </article>
+
+      <!-- Statistics Section -->
+      <section id="statistics" class="section stats-section">
+        <h2 class="section-title">
+          <i>trending_up</i>
+          <span>Project Stats</span>
+        </h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <i>star</i>
+            <div class="stat-content">
+              <span class="stat-label">Stars</span>
+              <a href="https://github.com/thamodharangm/catchify/stargazers">
+                <img
+                  src="https://img.shields.io/github/stars/thamodharangm/catchify?style=flat-square&color=c9a6ff&labelColor=241f38&label=STARS"
+                  alt="Stars"
+                />
+              </a>
+            </div>
+          </article>
+          <article class="stat-card">
+            <i>fork_right</i>
+            <div class="stat-content">
+              <span class="stat-label">Forks</span>
+              <a href="https://github.com/thamodharangm/catchify/fork">
+                <img
+                  src="https://img.shields.io/github/forks/thamodharangm/catchify?style=flat-square&color=c9a6ff&labelColor=241f38&label=FORKS"
+                  alt="Forks"
+                />
+              </a>
+            </div>
+          </article>
+          <article class="stat-card">
+            <i>download</i>
+            <div class="stat-content">
+              <span class="stat-label">Downloads</span>
+              <a href="https://github.com/thamodharangm/catchify/releases">
+                <img
+                  src="https://img.shields.io/github/downloads/thamodharangm/catchify/total?style=flat-square&color=c9a6ff&labelColor=241f38&label=DOWNLOADS"
+                  alt="Downloads"
+                />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section features-section">
+        <h2 class="section-title">
+          <i>auto_awesome</i>
+          <span>Features</span>
+        </h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <i>ad_off</i>
+            <span>No ads, no subscriptions, no hidden costs — completely free to use.</span>
+          </article>
+          <article class="feature-card">
+            <i>cloud_download</i>
+            <span>Download songs and playlists to listen anywhere, even offline.</span>
+          </article>
+          <article class="feature-card">
+            <i>playlist_add</i>
+            <span>Create custom playlists, import them via link, and organize them into folders.</span>
+          </article>
+          <article class="feature-card">
+            <i>equalizer</i>
+            <span>Fine-tune your sound with an adjustable equalizer and ready-made presets.</span>
+          </article>
+          <article class="feature-card">
+            <i>lyrics</i>
+            <span>Follow along with synced lyrics while you listen.</span>
+          </article>
+          <article class="feature-card">
+            <i>language</i>
+            <span>An interface in 21+ languages, with curated suggestions for Tamil, Hindi, Telugu, and more.</span>
+          </article>
+          <article class="feature-card">
+            <i>insights</i>
+            <span>Time Machine gives you a monthly recap of what you've been listening to.</span>
+          </article>
+          <article class="feature-card">
+            <i>block</i>
+            <span>SponsorBlock automatically skips sponsored segments in supported tracks.</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Screenshots Section -->
+      <section id="screenshots" class="section screenshots-section">
+        <h2 class="section-title">
+          <i>photo_library</i>
+          <span>Screenshots</span>
+        </h2>
+        <div class="gallery-grid">
+          <img
+            src="assets/screenshot-home.png"
+            alt="Catchify home screen showing suggested playlists and recommended songs"
+            class="screenshot-img"
+            loading="lazy"
+          />
+          <img
+            src="assets/screenshot-settings.png"
+            alt="Catchify settings screen with theme, language, and playback options"
+            class="screenshot-img"
+            loading="lazy"
+          />
+          <img
+            src="assets/screenshot-language.png"
+            alt="Catchify language selection screen listing supported languages"
+            class="screenshot-img"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- Changelog Section -->
+      <section id="changelog" class="section changelog-section">
+        <h2 class="section-title">
+          <i>history</i>
+          <span>What's New</span>
+        </h2>
+        <article class="changelog-card">
+          <div id="changelog_element"></div>
+        </article>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="section faq-section">
+        <h2 class="section-title">
+          <i>chat_bubble</i>
+          <span>Frequently Asked Questions</span>
+        </h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is Catchify?</summary>
+            <p>Catchify is a free Android app for streaming and downloading music, with no ads, no subscriptions, offline playback, custom playlists, an equalizer, lyrics, and support for 21+ languages.</p>
+          </details>
+          <details>
+            <summary>Is Catchify free to use?</summary>
+            <p>Yes. Catchify is completely free, with no ads and no subscription plans.</p>
+          </details>
+          <details>
+            <summary>Can I listen to music offline with Catchify?</summary>
+            <p>Yes. Download songs and playlists for full offline listening.</p>
+          </details>
+          <details>
+            <summary>What languages does Catchify support?</summary>
+            <p>The interface supports 21+ languages, and music suggestions are curated for Tamil, Hindi, Telugu, Marathi, Bengali, Kannada, Punjabi, Malayalam, Gujarati, Urdu, Odia, Assamese, Sanskrit, and Konkani.</p>
+          </details>
+          <details>
+            <summary>How do I install Catchify?</summary>
+            <p>Tap the <a data-download-link href="https://github.com/thamodharangm/catchify/releases">Download</a> button on this page — the file downloads directly, then open it on your Android device to install.</p>
+          </details>
+          <details>
+            <summary>Who made Catchify?</summary>
+            <p>Catchify is developed by Thamodharan Ganesan.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="Catchify" class="catchify-logo" />
+            <span>Catchify</span>
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/thamodharangm/catchify">
+              <i>terminal</i>
+              <span>Source Code</span>
+            </a>
+            <a href="https://github.com/thamodharangm/catchify/issues">
+              <i>bug_report</i>
+              <span>Report an Issue</span>
+            </a>
+            <a href="mailto:thamodharangp@gmail.com">
+              <i>mail</i>
+              <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/thamodharangp">
+              <i>person</i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <p class="footer-copyright">
+            <i>code</i>
+            <span>Made by Thamodharan Ganesan &middot; &copy; 2026 Catchify</span>
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/beercss@4.0.20/dist/cdn/beer.min.js"
+  ></script>
+  <script type="text/javascript" src="assets/js/script.js?v=20260710b"></script>
+</html>
