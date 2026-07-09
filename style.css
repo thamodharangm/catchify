@@ -15,26 +15,26 @@ body.light {
   --on-error: #ffffff;
   --error-container: #fee2e2;
   --on-error-container: #7f1d1d;
-  --background: #fcfaff;
+  --background: #fffbea;
   --on-background: #1f2937;
   --surface: #ffffff;
   --on-surface: #1f2937;
-  --surface-variant: #ece6f0;
+  --surface-variant: #fef3c7;
   --on-surface-variant: #4b5563;
   --outline: #9ca3af;
-  --outline-variant: #e5e7eb;
+  --outline-variant: #fde68a;
   --shadow: #000000;
   --scrim: #000000;
   --inverse-surface: #1f2937;
   --inverse-on-surface: #f9fafb;
   --inverse-primary: #d8b4fe;
-  --surface-dim: #e5e7eb;
+  --surface-dim: #fde68a;
   --surface-bright: #ffffff;
   --surface-container-lowest: #ffffff;
-  --surface-container-low: #f9f7fd;
-  --surface-container: #f3f0fa;
-  --surface-container-high: #ede8f5;
-  --surface-container-highest: #e7e0f0;
+  --surface-container-low: #fffdf5;
+  --surface-container: #fef9ec;
+  --surface-container-high: #fdf3dc;
+  --surface-container-highest: #fbecc4;
 }
 
 html {
@@ -78,9 +78,84 @@ main {
   letter-spacing: -0.01em;
 }
 
+.nav-toggle-btn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--on-surface);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#navigation-bar.nav-open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#navigation-bar.nav-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#navigation-bar.nav-open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle-btn:hover,
+.nav-toggle-btn:focus-visible {
+  background: var(--surface-container-high);
+}
+
 @media only screen and (max-width: 760px) {
+  #navigation-bar {
+    padding: 0;
+  }
+
   .catchify-nav-logo {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .nav-toggle-btn {
+    display: inline-flex;
+  }
+
+  #navigation-bar > a {
     display: none;
+  }
+
+  #navigation-bar.nav-open {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #navigation-bar.nav-open > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    box-sizing: border-box;
   }
 }
 
@@ -223,6 +298,7 @@ main {
 
 .stat-card {
   background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
   border-radius: 24px;
   padding: 1.5rem;
   display: flex;
@@ -282,6 +358,7 @@ main {
 
 .feature-card {
   background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
   border-radius: 16px;
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -368,6 +445,7 @@ main {
 
 .changelog-card {
   background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
   border-radius: 24px;
   padding: 1.5rem 2rem;
   max-width: 700px;
@@ -394,6 +472,7 @@ main {
 
 .faq-list details {
   background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
   border-radius: 16px;
   padding: 1rem 1.25rem;
   margin-bottom: 0.75rem;

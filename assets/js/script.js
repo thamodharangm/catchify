@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
   assignNavClass();
   window.addEventListener("resize", assignNavClass);
+  setupNavToggle();
   fetchLatestRelease();
   fetchAppFeatures(FEATURES_URL);
 };
@@ -146,10 +147,30 @@ function parseChangelog(text) {
 function assignNavClass() {
   const nav = document.getElementById("navigation-bar");
   if (window.innerWidth > 760) {
-    nav.classList.remove("bottom");
+    nav.classList.remove("top", "nav-open");
     nav.classList.add("left");
+    const toggle = document.getElementById("nav-toggle");
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
   } else {
     nav.classList.remove("left");
-    nav.classList.add("bottom");
+    nav.classList.add("top");
   }
+}
+
+function setupNavToggle() {
+  const nav = document.getElementById("navigation-bar");
+  const toggle = document.getElementById("nav-toggle");
+  if (!nav || !toggle) return;
+
+  toggle.addEventListener("click", function () {
+    const isOpen = nav.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function () {
+      nav.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }

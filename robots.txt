@@ -1,4 +1,59 @@
+# =====================================================
+# Catchify - robots.txt
+# Author: Thamodharan G
+# Website: https://thamodharangm.github.io/catchify/
+# Last Updated: 2026-07-09
+# =====================================================
+
+# Allow all search engines
 User-agent: *
 Allow: /
 
+# Block common private/system folders (if they exist)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /auth/
+Disallow: /dashboard/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+
+# Block sensitive file types
+Disallow: /*.env$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.config$
+Disallow: /*.lock$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.md$
+
+# Allow important assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# Crawl delay (ignored by Google, respected by some crawlers)
+Crawl-delay: 5
+
+# Sitemap
 Sitemap: https://thamodharangm.github.io/catchify/sitemap.xml
+
+# Preferred Host
+Host: thamodharangm.github.io
