@@ -118,6 +118,11 @@ main {
   font-weight: 600;
 }
 
+#navigation-bar a.active i {
+  background: var(--primary-container) !important;
+  color: var(--on-primary-container) !important;
+}
+
 #navigation-bar.bottom a {
   border-radius: 16px;
   margin: 0.25rem;
