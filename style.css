@@ -1,40 +1,40 @@
-body.dark {
-  --primary: #c9a6ff;
-  --on-primary: #3a0a78;
-  --primary-container: #4b1f8f;
-  --on-primary-container: #e9d9ff;
-  --secondary: #ffd08a;
-  --on-secondary: #4a2c00;
-  --secondary-container: #6b4700;
-  --on-secondary-container: #ffe3b3;
-  --tertiary: #8de3d0;
-  --on-tertiary: #003731;
-  --tertiary-container: #00504a;
-  --on-tertiary-container: #a8fff0;
-  --error: #ffb4ab;
-  --on-error: #690005;
-  --error-container: #93000a;
-  --on-error-container: #ffb4ab;
-  --background: #14121f;
-  --on-background: #eae6f5;
-  --surface: #100e1a;
-  --on-surface: #eae6f5;
-  --surface-variant: #453f5c;
-  --on-surface-variant: #c9c2dc;
-  --outline: #928dab;
-  --outline-variant: #4a4560;
+body.light {
+  --primary: #60a5fa;
+  --on-primary: #172554;
+  --primary-container: #dbeafe;
+  --on-primary-container: #1e3a8a;
+  --secondary: #3b82f6;
+  --on-secondary: #172554;
+  --secondary-container: #bfdbfe;
+  --on-secondary-container: #1e3a8a;
+  --tertiary: #a855f7;
+  --on-tertiary: #3b0764;
+  --tertiary-container: #f3e8ff;
+  --on-tertiary-container: #581c87;
+  --error: #ef4444;
+  --on-error: #ffffff;
+  --error-container: #fee2e2;
+  --on-error-container: #7f1d1d;
+  --background: #f8fbff;
+  --on-background: #111827;
+  --surface: #ffffff;
+  --on-surface: #111827;
+  --surface-variant: #eff6ff;
+  --on-surface-variant: #4b5563;
+  --outline: #9ca3af;
+  --outline-variant: #e5e7eb;
   --shadow: #000000;
   --scrim: #000000;
-  --inverse-surface: #eae6f5;
-  --inverse-on-surface: #302b45;
-  --inverse-primary: #6a4bb3;
-  --surface-dim: #100e1a;
-  --surface-bright: #3a3452;
-  --surface-container-lowest: #0b0a13;
-  --surface-container-low: #1a1726;
-  --surface-container: #201c30;
-  --surface-container-high: #26213a;
-  --surface-container-highest: #2d2745;
+  --inverse-surface: #111827;
+  --inverse-on-surface: #f9fafb;
+  --inverse-primary: #93c5fd;
+  --surface-dim: #e5e7eb;
+  --surface-bright: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f7fafd;
+  --surface-container: #eff5fc;
+  --surface-container-high: #e6eef9;
+  --surface-container-highest: #dce7f5;
 }
 
 html {
@@ -108,7 +108,7 @@ main {
 }
 
 #hero .shape {
-  background-color: var(--on-primary) !important;
+  background-color: var(--primary) !important;
   width: 180px;
   height: 180px;
   margin: 0 auto 24px !important;

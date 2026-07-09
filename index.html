@@ -17,17 +17,19 @@
       content="Catchify, music streaming app, free music app, offline music player, Android music app, ad-free music, Tamil music app, Hindi music app, no ads music player"
     />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     <meta name="author" content="Thamodharan Ganesan" />
-    <meta
-      name="google-site-verification"
-      content="9zC34fSpgyMnwF8GUffEfNrquEFpQy9s4Bbg8fO726U"
-    />
+    <meta name="theme-color" content="#f8fbff" />
+    <meta name="google-site-verification" content="9zC34fSpgyMnwF8GUffEfNrquEFpQy9s4Bbg8fO726U" />
     <link rel="canonical" href="https://thamodharangm.github.io/catchify/" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="sitemap" type="application/xml" href="/catchify/sitemap.xml" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
       content="Catchify — Free Music Streaming &amp; Offline Player App"
@@ -40,6 +42,9 @@
       property="og:image"
       content="https://thamodharangm.github.io/catchify/assets/logo.png"
     />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Catchify app logo" />
     <meta property="og:url" content="https://thamodharangm.github.io/catchify/" />
     <meta property="og:site_name" content="Catchify" />
 
@@ -57,6 +62,7 @@
       name="twitter:image"
       content="https://thamodharangm.github.io/catchify/assets/logo.png"
     />
+    <meta name="twitter:image:alt" content="Catchify app logo" />
 
     <!-- Structured data: SoftwareApplication (helps AI/answer engines describe what Catchify is) -->
     <script type="application/ld+json">
@@ -64,9 +70,24 @@
         "@context": "https://schema.org",
         "@type": "MobileApplication",
         "name": "Catchify",
+        "url": "https://thamodharangm.github.io/catchify/",
+        "image": "https://thamodharangm.github.io/catchify/assets/logo.png",
         "operatingSystem": "Android",
         "applicationCategory": "MusicApplication",
         "description": "Catchify is a free, ad-free music streaming app for Android with offline downloads, custom playlists, a built-in equalizer, lyrics, and support for 21+ languages.",
+        "downloadUrl": "https://github.com/thamodharangm/catchify/releases/latest/download/app-github-release.apk",
+        "installUrl": "https://github.com/thamodharangm/catchify/releases/latest/download/app-github-release.apk",
+        "featureList": [
+          "No ads, no subscriptions, completely free",
+          "Offline downloads for songs and playlists",
+          "Custom playlists with import and folders",
+          "Adjustable equalizer with presets",
+          "Synced lyrics",
+          "21+ language interface with curated regional suggestions",
+          "Time Machine monthly listening recap",
+          "SponsorBlock sponsored-segment skipping"
+        ],
+        "inLanguage": ["en", "ta", "hi", "te"],
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -74,8 +95,55 @@
         },
         "author": {
           "@type": "Person",
-          "name": "Thamodharan Ganesan"
+          "name": "Thamodharan Ganesan",
+          "url": "https://www.linkedin.com/in/thamodharangp"
+        },
+        "sameAs": ["https://github.com/thamodharangm/catchify"]
+      }
+    </script>
+
+    <!-- Structured data: Organization/WebSite (helps GEO — grounds the "Catchify" entity for AI answer engines) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Catchify",
+        "url": "https://thamodharangm.github.io/catchify/",
+        "publisher": {
+          "@type": "Person",
+          "name": "Thamodharan Ganesan",
+          "sameAs": [
+            "https://github.com/thamodharangm",
+            "https://www.linkedin.com/in/thamodharangp"
+          ]
         }
+      }
+    </script>
+
+    <!-- Structured data: HowTo (helps AEO — voice/answer engines can surface install steps directly) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to install Catchify on Android",
+        "description": "Install the free Catchify music streaming app on an Android device.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Download the APK",
+            "text": "Download the latest Catchify APK from the official GitHub releases page."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Open the downloaded file",
+            "text": "Open the downloaded app-github-release.apk file on your Android device."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Allow installation and install",
+            "text": "Allow installation from this source if prompted, then tap Install to complete setup."
+          }
+        ]
       }
     </script>
 
@@ -153,10 +221,10 @@
       rel="stylesheet"
     />
   </head>
-  <body class="dark">
+  <body class="light">
     <nav id="navigation-bar">
       <header class="catchify-nav-logo">
-        <img class="large catchify-logo" src="assets/logo.png" alt="" />
+        <img class="large catchify-logo" src="assets/logo.png" alt="Catchify logo" />
         <span class="nav-brand-name">Catchify</span>
       </header>
       <a href="#hero" class="active">
@@ -242,7 +310,7 @@
               <span class="stat-label">Stars</span>
               <a href="https://github.com/thamodharangm/catchify/stargazers">
                 <img
-                  src="https://img.shields.io/github/stars/thamodharangm/catchify?style=flat-square&color=c9a6ff&labelColor=241f38&label=STARS"
+                  src="https://img.shields.io/github/stars/thamodharangm/catchify?style=flat-square&color=60a5fa&labelColor=241f38&label=STARS"
                   alt="Stars"
                 />
               </a>
@@ -254,7 +322,7 @@
               <span class="stat-label">Forks</span>
               <a href="https://github.com/thamodharangm/catchify/fork">
                 <img
-                  src="https://img.shields.io/github/forks/thamodharangm/catchify?style=flat-square&color=c9a6ff&labelColor=241f38&label=FORKS"
+                  src="https://img.shields.io/github/forks/thamodharangm/catchify?style=flat-square&color=60a5fa&labelColor=241f38&label=FORKS"
                   alt="Forks"
                 />
               </a>
@@ -266,7 +334,7 @@
               <span class="stat-label">Downloads</span>
               <a href="https://github.com/thamodharangm/catchify/releases">
                 <img
-                  src="https://img.shields.io/github/downloads/thamodharangm/catchify/total?style=flat-square&color=c9a6ff&labelColor=241f38&label=DOWNLOADS"
+                  src="https://img.shields.io/github/downloads/thamodharangm/catchify/total?style=flat-square&color=60a5fa&labelColor=241f38&label=DOWNLOADS"
                   alt="Downloads"
                 />
               </a>
