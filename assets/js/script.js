@@ -1,7 +1,9 @@
 const RELEASES_API =
   "https://api.github.com/repos/thamodharangm/catchify/releases/latest";
+const FEATURES_URL = "assets/features.txt";
 
 const changelogElement = document.getElementById("changelog_element");
+const featuresElement = document.getElementById("features_element");
 
 function makeHttpRequest(url, callback) {
   const xmlHttp = new XMLHttpRequest();
@@ -14,10 +16,26 @@ function makeHttpRequest(url, callback) {
   xmlHttp.send(null);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#screenshot-carousel", {
+    type: "loop",
+    perPage: 3,
+    gap: "2rem",
+    pagination: true,
+    arrows: false,
+    breakpoints: {
+      1200: { perPage: 3, gap: "2rem" },
+      699: { perPage: 2, gap: "1.5rem" },
+      560: { perPage: 1, gap: "1rem" },
+    },
+  }).mount();
+});
+
 window.onload = function () {
   assignNavClass();
   window.addEventListener("resize", assignNavClass);
   fetchLatestRelease();
+  fetchAppFeatures(FEATURES_URL);
 };
 
 function fetchLatestRelease() {
@@ -25,14 +43,17 @@ function fetchLatestRelease() {
     try {
       const release = JSON.parse(res);
 
-      const asset = (release.assets || []).find(
+      let asset = (release.assets || []).find(
         (a) =>
-          a.name.startsWith("catchify-v") &&
           a.name.endsWith(".apk") &&
           !a.name.includes("arm64") &&
           !a.name.includes("fdroid") &&
           !a.name.includes("debug"),
       );
+
+      if (!asset) {
+        asset = (release.assets || []).find((a) => a.name.endsWith(".apk"));
+      }
 
       if (asset) {
         document.querySelectorAll("[data-download-link]").forEach((el) => {
@@ -54,18 +75,72 @@ function fetchLatestRelease() {
   });
 }
 
+function fetchAppFeatures(featuresUrl) {
+  const featureIcons = [
+    "ad_off",
+    "cloud_download",
+    "playlist_add",
+    "equalizer",
+    "lyrics",
+    "language",
+    "insights",
+    "block",
+  ];
+
+  makeHttpRequest(featuresUrl, (res) => {
+    try {
+      const lines = res.split(/\r?\n/).filter((line) => line.trim() !== "");
+
+      const features = lines
+        .slice(1)
+        .map((line) =>
+          line
+            .trim()
+            .replace(/^\*\s*/, "")
+            .trim(),
+        )
+        .filter((line) => line.length > 0);
+
+      features.forEach((feature, index) => {
+        const card = document.createElement("article");
+        card.className = "feature-card";
+
+        const icon = document.createElement("i");
+        icon.textContent = featureIcons[index % featureIcons.length];
+
+        const text = document.createElement("span");
+        text.textContent = feature;
+
+        card.appendChild(icon);
+        card.appendChild(text);
+        featuresElement.appendChild(card);
+      });
+    } catch (error) {
+      console.error("Error processing app features:", error);
+    }
+  });
+}
+
 function parseChangelog(text) {
   const lines = text.split(/\r?\n/).filter((line) => line.trim() !== "");
+  let hasBullet = false;
 
   lines.forEach((line) => {
     const itemMatch = line.match(/^\*\s+(.+)$/);
     if (itemMatch) {
+      hasBullet = true;
       const processedText = itemMatch[1].replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
       const listItem = document.createElement("p");
       listItem.innerHTML = `• ${processedText}`;
       changelogElement.appendChild(listItem);
     }
   });
+
+  if (!hasBullet) {
+    const paragraph = document.createElement("p");
+    paragraph.innerHTML = text.trim().replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+    changelogElement.appendChild(paragraph);
+  }
 }
 
 function assignNavClass() {

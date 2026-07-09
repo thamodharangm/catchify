@@ -1,0 +1,10 @@
+Catchify is an app for streaming music. Its features include:
+
+* No ads, no subscriptions, no hidden costs — completely free to use
+* Download songs and playlists to listen anywhere, even offline
+* Create custom playlists, import them via link, and organize them into folders
+* Fine-tune your sound with an adjustable equalizer and ready-made presets
+* Follow along with synced lyrics while you listen
+* An interface in 21+ languages, with curated suggestions for Tamil, Hindi, Telugu, and more
+* Time Machine gives you a monthly recap of what you've been listening to
+* SponsorBlock automatically skips sponsored segments in supported tracks
