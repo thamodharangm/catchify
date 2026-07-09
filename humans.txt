@@ -1,0 +1,55 @@
+/* TEAM */
+
+Developer            : Thamodharan Ganesan
+Role                 : Android Developer, Full Stack Developer, UI/UX Designer
+Project              : Catchify
+Country              : India
+
+/* PRODUCT */
+
+Product Name         : Catchify
+Tagline              : Free, ad-free music streaming for Android
+Category             : Music & Audio
+Type                 : Music Streaming & Offline Player
+Platform             : Android
+Current Status       : Active Development
+
+/* DESCRIPTION */
+
+Catchify is a free Android app for streaming and downloading music. It has
+no ads, no subscriptions, and includes offline playback, custom playlists,
+an equalizer, lyrics, and support for 21+ languages.
+
+/* FEATURES */
+
+- No ads, no subscriptions, no hidden costs
+- Offline downloads for songs and playlists
+- Custom playlists with import via link and folder organization
+- Adjustable equalizer with ready-made presets
+- Synced lyrics
+- 21+ language interface with curated regional suggestions
+- Time Machine: monthly listening recap
+- SponsorBlock: automatically skips sponsored segments
+
+/* TECHNOLOGY */
+
+Website              : Static HTML, CSS, JavaScript
+Components           : BeerCSS, Splide.js
+Hosting              : GitHub Pages
+Version Control      : Git
+
+/* CREDITS */
+
+Developer            : Thamodharan Ganesan
+UI Design            : Thamodharan Ganesan
+
+/* CONTACT */
+
+Website              : https://thamodharangm.github.io/catchify/
+GitHub               : https://github.com/thamodharangm/catchify
+Email                : thamodharangp@gmail.com
+LinkedIn             : https://www.linkedin.com/in/thamodharangp
+
+/* COPYRIGHT */
+
+Made by Thamodharan Ganesan. (c) 2026 Catchify.

@@ -1,0 +1,55 @@
+{
+  "id": "/catchify/",
+  "name": "Catchify - Free Music Streaming & Offline Player",
+  "short_name": "Catchify",
+  "description": "Catchify is a free, ad-free music streaming app for Android with offline downloads, custom playlists, a built-in equalizer, lyrics, and support for 21+ languages.",
+
+  "start_url": "/catchify/",
+  "scope": "/catchify/",
+  "display": "standalone",
+
+  "orientation": "portrait-primary",
+
+  "theme_color": "#a855f7",
+  "background_color": "#fffbea",
+
+  "lang": "en",
+  "dir": "ltr",
+
+  "categories": ["music", "entertainment"],
+
+  "prefer_related_applications": false,
+
+  "icons": [
+    {
+      "src": "/catchify/assets/logo.png",
+      "sizes": "419x407",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/catchify/assets/screenshot-home.png",
+      "sizes": "480x1067",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Catchify home screen showing suggested playlists and recommended songs"
+    },
+    {
+      "src": "/catchify/assets/screenshot-settings.png",
+      "sizes": "480x1067",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Catchify settings screen with theme, language, and playback options"
+    },
+    {
+      "src": "/catchify/assets/screenshot-language.png",
+      "sizes": "480x1067",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Catchify language selection screen"
+    }
+  ]
+}
