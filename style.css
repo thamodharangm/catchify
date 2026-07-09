@@ -161,17 +161,52 @@ main {
   max-width: 700px;
 }
 
-#hero .shape {
-  background-color: var(--on-primary) !important;
+.hero-logo-wrap {
+  position: relative;
   width: 180px;
   height: 180px;
-  margin: 0 auto 24px !important;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-blob {
+  position: absolute;
+  inset: 0;
+  border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+  background-color: var(--on-primary);
+  animation:
+    blob-morph 8s ease-in-out infinite,
+    blob-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+  }
+  50% {
+    border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+  }
+}
+
+@keyframes blob-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 26px 4px rgba(201, 166, 255, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 40px 10px rgba(201, 166, 255, 0.32);
+  }
 }
 
 .hero-logo {
-  width: 60%;
-  height: 60%;
+  position: relative;
+  width: 55%;
+  height: 55%;
   object-fit: contain;
+  z-index: 1;
 }
 
 .hero-title {
@@ -532,7 +567,7 @@ main {
     font-size: 1rem;
   }
 
-  #hero .shape {
+  .hero-logo-wrap {
     width: 130px;
     height: 130px;
   }
