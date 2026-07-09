@@ -151,11 +151,23 @@ main {
   max-width: 700px;
 }
 
-#hero .shape {
-  background-color: var(--on-primary) !important;
+.hero-logo-blob {
   width: 180px;
   height: 180px;
-  margin: auto !important;
+  border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+  background-color: var(--on-primary);
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-logo {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+  display: block;
 }
 
 .hero-title {
@@ -516,9 +528,9 @@ main {
     font-size: 1rem;
   }
 
-  .hero-logo {
-    width: 80px;
-    height: 80px;
+  .hero-logo-blob {
+    width: 130px;
+    height: 130px;
   }
 
   .section-title {
