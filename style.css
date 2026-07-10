@@ -589,6 +589,12 @@ main {
 
   .section-title {
     font-size: 1.4rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section-title i {
+    font-size: 2rem;
   }
 
   .screenshot-img {
