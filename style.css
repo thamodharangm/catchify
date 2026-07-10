@@ -589,7 +589,9 @@ main {
 
   .section-title {
     font-size: 1.4rem;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     gap: 0.5rem;
   }
 
