@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/thamodharangm/catchify/raw/main/.github/assets/Catchify-banner.png" width="100%">
+<img src="https://github.com/thamodharangm/catchify/raw/main/.github/assets/catchify-banner-v2.png" width="100%">
 
 # Catchify
 
