@@ -53,7 +53,7 @@ Allow: /*.ttf$
 Crawl-delay: 5
 
 # Sitemap
-Sitemap: https://thamodharangm.github.io/catchify/sitemap.xml
+Sitemap: https://catchify.textmateai.online/sitemap.xml
 
 # Preferred Host
-Host: thamodharangm.github.io
+Host: catchify.textmateai.online
